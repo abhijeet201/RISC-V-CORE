@@ -1,50 +1,46 @@
-@@ -4,13 +4,13 @@ Overview: A 5-stage pipelined RISC-V processor written in Verilog. It supports t
+## RISC-V Pipelined Processor
+This is a Verilog implementation of a 5-stage pipelined RISC-V processor based on the RV32I instruction set architecture. It supports key instructions including arithmetic, load/store, branch, and jump. The pipeline structure improves performance by overlapping instruction execution.
 
----
+##  Pipelined CPU Architecture
 
-## 🧠 Block Diagram
-##  Block Diagram
+Below is the architecture of the 5-stage pipelined RISC-V CPU with full hazard handling.
 
-![Block Diagram](assets/block_diagram.png)
+![Pipeline Diagram](assets/pipeline_diagram.png)
 
----
 
-## 🚀 Features
+
 ##  Features
 
-1. **5-Stage Pipeline:** Instruction Fetch, Decode, Execute, Memory, and Writeback stages allowing multiple instructions to run simultaneously.
-2. **Hazard Detection & Forwarding:** Ensures correct execution of instructions by resolving data hazards dynamically.
-@@ -23,7 +23,7 @@ Overview: A 5-stage pipelined RISC-V processor written in Verilog. It supports t
+- RV32I instruction support
+- 5-stage pipeline: Fetch, Decode, Execute, Memory, Writeback
+- Hazard detection and forwarding logic
+- ALU with support for add, sub, and/or/xor/slt
+- Testbench for simulation and verification
 
----
+ ##  Project Structure
+- `pipeline_processor.v` - Top level module
+- `riscv.v` - Core CPU integration
+- `datapath.v` - All datapath components
+- `controller.v` - Controller for control signals
+- `alu.v` - Arithmetic logic unit
+- `extend.v` - Sign extension to 32 bits
+- `hazard.v` - Hazard unit
+- `imem.v / dmem.v` - Instruction and data memory
+- `regfile.v` - Register file
+- `testbench.v` - Testbench for simulation
+- `regfile.hex` - Initial register values
+- `instruction.hex` - Machine code as instructions
 
-## 📁 Key Files
-##  Key Files
+##  How to Run
+- Compile all `.v` files in Vivado
+- Add `regfile.hex` and `instruction.hex` files as memory files
+- Run the testbench `testbench.v`
 
-| File           | Description                                |
-|----------------|--------------------------------------------|
-@@ -37,14 +37,14 @@ Overview: A 5-stage pipelined RISC-V processor written in Verilog. It supports t
+##  Simulation
+![Simulation](assets/simulation.png)
 
----
+##  Credits
+- Author : Arihant Bhandari - B.Tech in Electrical Engineering, IIT Indore
 
-## 💻 Tools Used
-##  Tools Used
-
-- **Simulator:** Xilinx Vivado  
-- **HDL:** Verilog
-
----
-
-## 🛠️ How to Simulate
-##  How to Simulate
-
-1. Compile all `.v` files.
-2. Include these memory files:
-@@ -55,7 +55,7 @@ Overview: A 5-stage pipelined RISC-V processor written in Verilog. It supports t
-
----
-
-## 📈 Simulation Output
-##  Simulation Output
-
-![Simulation Waveform](assets/waveform.png)
+##  References
+- Digital Design and Computer Architecture RISC-V Edition by Sarah L Harris, David Money Harris
