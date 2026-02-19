@@ -40,7 +40,7 @@ Below is the architecture of the 5-stage pipelined RISC-V CPU with full hazard h
 ![Simulation](assets/simulation.png)
 
 ##  Credits
-- Author : Arihant Bhandari - B.Tech in Electrical Engineering, IIT Indore
+- Author : Abhijeet Parmar - B.Tech in Electrical Engineering, IIT Indore
 
 ##  References
 - Digital Design and Computer Architecture RISC-V Edition by Sarah L Harris, David Money Harris
