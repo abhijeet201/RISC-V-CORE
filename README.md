@@ -64,4 +64,4 @@ Overview: A 5-stage pipelined RISC-V processor written in Verilog. It supports t
 
 ---
 
-Made  by [Harshal Rudraksha-B.Tech in Electrical Engineering,IIT Indore](https://github.com/harshalrudraksha)
+Made  by [Abhijeet Parmar -B.Tech in Electrical Engineering,IIT Indore](https://github.com/abhijeet201)
